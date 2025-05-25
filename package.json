@@ -1,5 +1,5 @@
 {
-  "name": "beautiful-portfolio",
+  "name": "portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -19,7 +19,9 @@
     "react-dom": "^18.3.1",
     "react-router-dom": "^7.5.1",
     "tailwind-merge": "^3.2.0",
-    "tailwindcss": "^4.1.4"
+    "tailwindcss": "^4.1.4",
+    "@emailjs/browser": "^4.4.1",
+    "framer-motion": "^12.12.2"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
