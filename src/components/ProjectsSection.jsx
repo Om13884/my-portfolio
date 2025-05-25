@@ -3,32 +3,48 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "SaaS Landing Page",
-    description: "A beautiful landing page app using React and Tailwind.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS", "Supabase"],
+    title: "Portfolio Website",
+    description: "A modern, responsive portfolio built with React, Tailwind CSS, and JavaScript, showcasing my front-end skills and academic projects as a recent graduate.",
+    image: "/projects/Portfolio website.png",
+    tags: ["React", "TailwindCSS", "JavaScript"],
     demoUrl: "#",
-    githubUrl: "#",
   },
   {
     id: 2,
-    title: "Orbit Analytics Dashboard",
+    title: "File Vault: Secure and Decentralized File Storage",
     description:
-      "Interactive analytics dashboard with data visualization and filtering capabilities.",
-    image: "/projects/project2.png",
-    tags: ["TypeScript", "D3.js", "Next.js"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "File Vault is a capstone project that provides a secure and decentralized file storage solution, designed to ensure data privacy, integrity, and accessibility.",
+    image: "/projects/FileVault.jpg",
+    tags: ["Access control", "AES", "Blockchain"],
   },
   {
     id: 3,
-    title: "E-commerce Platform",
+    title: "Flappy Bird game Project",
     description:
-      "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project3.png",
-    tags: ["React", "Node.js", "Stripe"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "A fun and interactive Flappy Bird game built with Android Studio, featuring smooth gameplay and responsive touch controls.",
+    image: "/projects/Flappy bird game.png",
+    tags: ["2D game", "flappy bird clone", "Android Studio"],
+  },
+  {
+    id: 4,
+    title: "Designed Hand Gestures For Android",
+    description: "Developed an Android-based system to control devices using real-time hand gesture recognition, enhancing accessibility and hands-free interaction.",
+    image: "/projects/SE project.png",
+    tags: ["Real time tracking","Hand Gestures"],
+  },
+  {
+    id: 5,
+    title: "Ml Project Skin detectiction Technique",
+    description: "Built a machine learning pipeline using Scikit-learn and OpenCV to detect and classify skin regions in images, improving accuracy in image-based diagnostics and security systems.",
+    image: "/projects/ml project.png",
+    tags: ["machine learning", "pandas", "numpy"],
+  },
+  {
+    id: 6,
+    title: "Bluetooth App",
+    description: "Designed a mobile-controlled Bluetooth system to remotely operate a glowing bulb, enabling efficient and user-friendly smart lighting control.",
+    image: "/projects/Bluetooth app project.jpg",
+    tags: ["Bluetooth", "IoT", "Wireless Control"],
   },
 ];
 
@@ -42,8 +58,7 @@ export const ProjectsSection = () => {
         </h2>
 
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Here are some of my recent projects. Each project was carefully
-          crafted with attention to detail, performance, and user experience.
+            Here are some of the academic projects I worked on, showcasing my skills in full-stack development, machine learning, and embedded systems.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -100,7 +115,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/heartbeat576"
           >
             Check My Github <ArrowRight size={16} />
           </a>
