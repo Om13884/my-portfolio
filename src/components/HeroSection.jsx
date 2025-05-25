@@ -9,26 +9,24 @@ export const HeroSection = () => {
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-            <span className="opacity-0 animate-fade-in"> Hi, I'm</span>
+            <span className="opacity-0 animate-fade-in"> Hello, I am</span>
             <span className="text-primary opacity-0 animate-fade-in-delay-1">
               {" "}
-              Pedro
+              Rishav
             </span>
             <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
               {" "}
-              Machado
+              Kumar
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I create stellar web experiences with modern technologies.
-            Specializing in front-end development, I build interfaces that are
-            both beautiful and functional.
+            A recent Computer Science graduate specializing in web technologies. With hands-on experience in building responsive websites using React, TypeScript, and Tailwind CSS, I aim to craft clean, scalable digital experiences. Passionate about full-stack development, I’ve also contributed to cloud and machine learning projects during my academic and internship journey.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
-              View My Work
+              View My Repository
             </a>
           </div>
         </div>
