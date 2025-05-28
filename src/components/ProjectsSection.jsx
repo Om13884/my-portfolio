@@ -34,7 +34,7 @@ const projects = [
   },
   {
     id: 5,
-    title: "Ml Project Skin detectiction Technique",
+    title: "Ml Project Skin detection Technique",
     description: "Built a machine learning pipeline using Scikit-learn and OpenCV to detect and classify skin regions in images, improving accuracy in image-based diagnostics and security systems.",
     image: "/projects/ml project.png",
     tags: ["machine learning", "pandas", "numpy"],
