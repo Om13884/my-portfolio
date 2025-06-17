@@ -1,32 +1,69 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import {
+  Code2,
+  Type,
+  Palette,
+  Database,
+  FileCode2,
+  Server,
+  GitBranch,
+  BookOpen,
+  Laptop,
+  Shield,
+  FileText,
+  BarChart2,
+  Image,
+  FileType,
+  Terminal,
+  Globe,
+  Layers,
+  Network,
+  MessageSquare,
+  Monitor,
+  Presentation,
+  TerminalSquare,
+} from "lucide-react";
 
 const skills = [
   // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 80, category: "frontend" },
-  { name: "React", level: 70, category: "frontend" },
-  { name: "TypeScript", level: 65, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Bootstrap", level: 60, category: "frontend" },
+  { name: "HTML/CSS", icon: FileType, category: "frontend" },
+  { name: "JavaScript", icon: FileType, category: "frontend" },
+  { name: "React", icon: Code2, category: "frontend" },
+  // { name: "TypeScript", icon: Type, category: "frontend" },
+  { name: "Tailwind CSS", icon: Palette, category: "frontend" },
+  { name: "Bootstrap", icon: Palette, category: "frontend" },
+  
 
   // Backend
-  { name: "Python", level: 80, category: "backend" },
-  { name: "SQL", level: 90, category: "backend" },
-  { name: "C++", level: 60, category: "backend" },
-  { name: "Azure DevOPs", level: 55, category: "backend" },
-  { name: "Java", level: 60, category: "backend" },
-  { name: "Rest API", level: 60, category: "backend" },
+  { name: "Python", icon: Terminal, category: "backend" },
+  { name: "SQL", icon: Database, category: "backend" },
+  { name: "Solidity", icon: FileCode2, category: "backend" },
+  { name: "Ethereum", icon: FileCode2, category: "backend" },
+  { name: "Blockchain", icon: FileCode2, category: "backend " },
+  { name: "Smart Contracts", icon: FileCode2, category: "backend" },
+  { name: "Web3", icon: FileCode2, category: "backend" },
+  { name: "Blockchain", icon: FileCode2, category: "backend" },
+  { name: "Smart Contracts", icon: FileCode2, category: "backend" },
+  { name: "Web3", icon: FileCode2, category: "backend" },
+  { name: "Rest API", icon: Globe, category: "backend" },
 
   // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "jupyter", level: 80, category: "tools" },
-  { name: "Google Colab", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
-  { name: "Nmap", level: 75, category: "tools" },
-  { name: "Ms O365", level: 95, category: "tools" },
-  { name: "Adobe Analytics", level: 55, category: "tools" },
-  { name: "Canva", level: 95, category: "tools" },
+  { name: "Git/GitHub", icon: GitBranch, category: "tools" },
+  { name: "jupyter", icon: BookOpen, category: "tools" },
+  { name: "Google Colab", icon: Laptop, category: "tools" },
+  { name: "VS Code", icon: Code2, category: "tools" },
+  { name: "Nmap", icon: Shield, category: "tools" },
+  { name: "Ms O365", icon: FileText, category: "tools" },
+  { name: "Adobe Analytics", icon: BarChart2, category: "tools" },
+  { name: "Canva", icon: Image, category: "tools" },
+  { name: "Wireshark", icon: Network, category: "tools" },
+  { name: "Remix IDE", icon: FileCode2, category: "tools" },
+  { name: "Microsoft PowerPoint", icon: Presentation, category: "tools" },
+  { name: "Networking Concepts", icon: Network, category: "tools" },
+  { name: "Prompt Engineering", icon: MessageSquare, category: "tools" },
+  { name: "Kali Linux", icon: TerminalSquare, category: "tools" },
+  { name: "OpenAI", icon: MessageSquare, category: "tools" },
 ];
 
 const categories = ["all", "frontend", "backend", "tools"];
@@ -65,22 +102,13 @@ export const SkillsSection = () => {
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-6 rounded-lg shadow-xs transition-all duration-150 hover:shadow-lg hover:shadow-primary/50 hover:scale-110 group"
             >
-              <div className="text-left mb-4">
-                <h3 className="font-semibold text-lg"> {skill.name}</h3>
-              </div>
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full origin-left animate-[grow_1.5s_ease-out]"
-                  style={{ width: skill.level + "%" }}
-                />
-              </div>
-
-              <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
+              <div className="flex items-center gap-4">
+                <div className="p-3 rounded-full bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                  <skill.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-lg">{skill.name}</h3>
               </div>
             </div>
           ))}

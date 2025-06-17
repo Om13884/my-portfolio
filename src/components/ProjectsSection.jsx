@@ -5,46 +5,28 @@ const projects = [
     id: 1,
     title: "Portfolio Website",
     description: "A modern, responsive portfolio built with React, Tailwind CSS, and JavaScript, showcasing my front-end skills and academic projects as a recent graduate.",
-    image: "/projects/Portfolio website.png",
-    tags: ["React", "TailwindCSS", "JavaScript"],
+    image: "/projects/Portfolio website.jpg",
+    tags: ["React", "Next.js", "vite","TailwindCSS", "JavaScript"],
     demoUrl: "#",
+    githubUrl: "#",
   },
   {
     id: 2,
     title: "File Vault: Secure and Decentralized File Storage",
     description:
       "File Vault is a capstone project that provides a secure and decentralized file storage solution, designed to ensure data privacy, integrity, and accessibility.",
-    image: "/projects/FileVault.jpg",
-    tags: ["Access control", "AES", "Blockchain"],
+    image: "/projects/file-vault.jpg",
+    tags: ["Access control", "AES", "Blockchain","Solidity","Ethereum"],
+    githubUrl: "https://github.com/Om13884/file-vault",
   },
   {
     id: 3,
-    title: "Flappy Bird game Project",
+    title: "Nft-getting website for a client",
     description:
-      "A fun and interactive Flappy Bird game built with Android Studio, featuring smooth gameplay and responsive touch controls.",
-    image: "/projects/Flappy bird game.png",
-    tags: ["2D game", "flappy bird clone", "Android Studio"],
-  },
-  {
-    id: 4,
-    title: "Designed Hand Gestures For Android",
-    description: "Developed an Android-based system to control devices using real-time hand gesture recognition, enhancing accessibility and hands-free interaction.",
-    image: "/projects/SE project.png",
-    tags: ["Real time tracking","Hand Gestures"],
-  },
-  {
-    id: 5,
-    title: "Ml Project Skin detection Technique",
-    description: "Built a machine learning pipeline using Scikit-learn and OpenCV to detect and classify skin regions in images, improving accuracy in image-based diagnostics and security systems.",
-    image: "/projects/ml project.png",
-    tags: ["machine learning", "pandas", "numpy"],
-  },
-  {
-    id: 6,
-    title: "Bluetooth App",
-    description: "Designed a mobile-controlled Bluetooth system to remotely operate a glowing bulb, enabling efficient and user-friendly smart lighting control.",
-    image: "/projects/Bluetooth app project.jpg",
-    tags: ["Bluetooth", "IoT", "Wireless Control"],
+    "A modern NFT marketplace website built for a client, featuring a sleek user interface for browsing, buying, and selling NFTs. The platform includes user authentication, wallet integration, and real-time price updates.",
+    image: "/projects/nft-getting.jpg",
+    tags: ["React", "Next.js", "vite","TailwindCSS", "JavaScript"],
+    githubUrl: "https://github.com/Om13884/nft-token-demo",
   },
 ];
 
@@ -63,44 +45,56 @@ export const ProjectsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
-            <div
+            <a
               key={key}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover"
+              href={project.githubUrl || project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-1"
             >
-              <div className="h-48 overflow-hidden">
+              <div className="h-48 overflow-hidden relative">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="flex space-x-4">
+                    {project.githubUrl && (
+                      <div className="bg-white/10 backdrop-blur-sm p-2 rounded-full">
+                        <Github size={24} className="text-white" />
+                      </div>
+                    )}
+                    {project.demoUrl && (
+                      <div className="bg-white/10 backdrop-blur-sm p-2 rounded-full">
+                        <ExternalLink size={24} className="text-white" />
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                    <span key={tag} className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-1"> {project.title}</h3>
+                <h3 className="text-xl font-semibold mb-1 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                  </div>
+                <div className="flex items-center text-sm text-primary">
+                  View Project
+                  <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
@@ -108,7 +102,7 @@ export const ProjectsSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/heartbeat576"
+            href="https://github.com/Om13884"
           >
             Check My Github <ArrowRight size={16} />
           </a>

@@ -8,7 +8,7 @@ import { ProjectsSection } from "../components/ProjectsSection";
 import { ContactSection } from "../components/ContactSection";
 import { Footer } from "../components/Footer";
 import { InternshipsSection } from "../components/InternshipsSection";
-
+import { WhiteBackground } from "../components/whitebackground";
 export const Home = () => {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
@@ -16,7 +16,7 @@ export const Home = () => {
       <ThemeToggle />
       {/* Background Effects */}
       <StarBackground />
-
+      <WhiteBackground />
       {/* Navbar */}
       <Navbar />
       {/* Main Content */}

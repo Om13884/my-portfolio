@@ -3,29 +3,29 @@ import { motion } from "framer-motion";
 const internships = [
   {
     id: 1,
-    title: "Web Development Intern",
-    company: "INTERNPE",
+    title: "Cybersecurity Analyst",
+    company: "Tata (Job Simulation)",
     year: "Jan 2024 – Feb 2024",
     description: [
-      "Assisted in the design and development of responsive websites using React, CSS, JavaScript, and various frameworks.",
-      "Participated in code reviews and debugging sessions to maintain code quality and optimize performance.",
-      "Performed testing and verification to identify and resolve issues, improving site reliability.",
-      "Executed component-level feature testing and assisted with release testing during deployment cycles."
+      "Worked on real-world security scenarios involving identity and access management (IAM).",
+      "Handled and resolved user queries related to access control, permissions, and potential breaches.",
+      "Generated detailed security reports based on investigation findings and IAM audits.",
+      "Gained hands-on experience with access workflows and policy-based control system .",
     ],
-    tags: ["React", "JavaScript", "CSS", "Web Development", "HTML"]
+    tags: ["IAM", "Security Analysis", "Incident Response", "Access Control", "Reporting"]
   },
   {
     id: 2,
-    title: "Data Science Intern",
+    title: "Cybersecurity & Ethical Hacking Intern",
     company: "1Stop.ai",
-    year: "Feb 2023 – Mar 2023",
+    year: "July 2023 – Aug 2023",
     description: [
-      "Analyzed large datasets using Python, Pandas, and NumPy to extract meaningful insights.",
-      "Created data visualizations with Matplotlib and Seaborn to communicate findings effectively.",
-      "Worked with SQL databases for data extraction, cleaning, and analysis.",
-      "Automated data report generation using Python scripts and scheduled visual updates via Jupyter notebooks."
+    "Used Kali Linux for penetration testing and vulnerability assessment.",
+    "Built custom tools including a Python-based port scanner and IP finder.",
+    "Gained deep understanding of ethical hacking, network security, and system exploitation.",
+    "Worked with Nmap and other reconnaissance tools to simulate attack-defense strategies."
     ],
-    tags: ["Python", "Pandas", "NumPy", "Data Visualization", "SQL"]
+    tags: ["Kali Linux", "Python", "Nmap", "Penetration Testing", "Cybersecurity"]
   }
 ];
 
@@ -72,9 +72,11 @@ export const InternshipsSection = () => {
                 {internship.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="px-2 py-1 text-xs font-medium rounded-full bg-white/10 backdrop-blur-sm text-white shadow-inner"
+                    className="px-3 py-1.5 text-xs font-medium rounded-full bg-primary/10 backdrop-blur-sm text-white relative group"
                   >
-                    {tag}
+                    <span className="absolute inset-0 bg-primary/20 blur-md rounded-full animate-pulse"></span>
+                    <span className="absolute inset-0 bg-gradient-to-r from-primary/30 via-primary/20 to-primary/30 rounded-full opacity-50"></span>
+                    <span className="relative z-10">{tag}</span>
                   </span>
                 ))}
               </div>
