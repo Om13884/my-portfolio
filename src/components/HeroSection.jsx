@@ -12,7 +12,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center px-4 py-8"
+      className="relative min-h-screen flex items-center justify-center px-4 py-8 mt-24"
     >
       <div className="container max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:gap-12 text-center md:text-left">
         {/* Left side - Text content */}
