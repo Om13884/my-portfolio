@@ -18,6 +18,7 @@ const projects = [
     image: "/projects/file-vault.jpg",
     tags: ["Access control", "AES", "Blockchain","Solidity","Ethereum"],
     githubUrl: "https://github.com/Om13884/file-vault",
+    demoUrl : "https://eth-trade-vault.lovable.app/",
   },
   {
     id: 3,
