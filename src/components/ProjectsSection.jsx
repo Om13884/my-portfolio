@@ -28,7 +28,18 @@ const projects = [
     tags: ["React", "Next.js", "vite","TailwindCSS", "JavaScript"],
     githubUrl: "https://github.com/Om13884/nft-token-demo",
   },
+  {
+  id: 4,
+  title: "ETH Trade Vault - Web3 Trading Dashboard",
+  description:
+    "A minimalistic Web3 trading dashboard that allows users to connect their wallet, view real-time ETH/USD prices, check their wallet balance, and simulate ETH investments based on USD input. Built to explore DeFi UX and Web3 integrations with future scalability in mind.",
+  image: "/projects/trading_deshboard.png", // replace with actual image path
+  tags: ["React", "Vite", "Web3.js", "TailwindCSS", "Solidity", "Hardhat"],
+  githubUrl: "https://github.com/Om13884/eth-trade-vault", // replace with your actual GitHub repo
+},
+
 ];
+
 
 export const ProjectsSection = () => {
   return (
