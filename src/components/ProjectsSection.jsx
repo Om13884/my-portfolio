@@ -34,9 +34,31 @@ const projects = [
   title: "ETH Trade Vault - Web3 Trading Dashboard",
   description:
     "A minimalistic Web3 trading dashboard that allows users to connect their wallet, view real-time ETH/USD prices, check their wallet balance, and simulate ETH investments based on USD input. Built to explore DeFi UX and Web3 integrations with future scalability in mind.",
-  image: "/projects/trading_deshboard.png", // replace with actual image path
+  image: "/projects/trading_deshboard.png", 
   tags: ["React", "Vite", "Web3.js", "TailwindCSS", "Solidity", "Hardhat"],
-  githubUrl: "https://github.com/Om13884/eth-trade-vault", // replace with your actual GitHub repo
+  githubUrl: "https://github.com/Om13884/eth-trade-vault", 
+},
+{
+  id: 5,
+  title: "Text-to-Speech Converter",
+  description:
+    "A simple text-to-speech web app that converts user-inputted text into natural speech. Users can input text, select a voice, and listen to the generated audio output instantly. Designed to make text more accessible with an easy-to-use UI.",
+  image: "/projects/text_to_speech.png",
+  tags: ["React", "JavaScript", "HTML", "CSS"],
+  githubUrl: "https://github.com/Om13884/text_to_speech-",
+},
+
+ {
+  id: 6,
+  title: "Dynamic Sports NFT (Weather-driven Dynamic NFTs)",
+  description:
+    "A decentralized application (dApp) for creating dynamic ERC-1155 NFTs whose metadata—especially images—can be updated by authorized accounts to reflect changing conditions (e.g., emotions, weather). Built with a React frontend and Hardhat smart contracts to explore interactive Web3 NFT experiences.",
+  image: "/projects/dynamic_sports_nft.png",
+  tags: [
+    "React", "Vite", "TailwindCSS", "Solidity", "Hardhat", 
+    "Ethers.js", "Pinata", "Framer Motion"
+  ],
+  githubUrl: "https://github.com/Om13884/Dyanamic_nft_for_weather",
 },
 
 ];
