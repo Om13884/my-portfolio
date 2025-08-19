@@ -53,7 +53,7 @@ const projects = [
   title: "Dynamic Sports NFT (Weather-driven Dynamic NFTs)",
   description:
     "A decentralized application (dApp) for creating dynamic ERC-1155 NFTs whose metadata—especially images—can be updated by authorized accounts to reflect changing conditions (e.g., emotions, weather). Built with a React frontend and Hardhat smart contracts to explore interactive Web3 NFT experiences.",
-  image: "/projects/dynamic_sports_nft.png",
+  image: "/projects/weather_nft.jpg",
   tags: [
     "React", "Vite", "TailwindCSS", "Solidity", "Hardhat", 
     "Ethers.js", "Pinata", "Framer Motion"
